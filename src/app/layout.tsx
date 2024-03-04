@@ -20,6 +20,18 @@ export const metadata: Metadata = {
 // 	initialScale: 1,
 // };
 
+
+
+
+
+
+
+
+
+
+
+
+
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html className={noteSansJp.className} lang="ja">
