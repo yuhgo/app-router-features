@@ -7,8 +7,9 @@ import {
 	CommandItem,
 	CommandList,
 	CommandSeparator,
+	CommandShortcut,
 } from "@/app/_component/ui/command";
-import { Component, Settings, User } from "lucide-react";
+import { ArrowUpRightFromSquare, Component, Settings, User } from "lucide-react";
 import { type FC, useEffect, useState } from "react";
 
 export const CommandInputButton: FC = () => {
@@ -66,6 +67,9 @@ export const CommandInputButton: FC = () => {
 						<CommandItem>
 							<Settings className="mr-2 h-4 w-4" />
 							<span>設定</span>
+							<CommandShortcut>
+								<ArrowUpRightFromSquare className="ml-auto h-4 w-4" />
+							</CommandShortcut>
 						</CommandItem>
 					</CommandGroup>
 				</CommandList>
