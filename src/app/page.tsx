@@ -1,5 +1,6 @@
 import { extractYouTubeVideoId } from "@/_lib/extractYouTubeVideoId";
 import { Explorer } from "@/app/_component/explorer/explorer";
+import { QrCode } from "@/app/_component/widget/qr-code";
 import { VideoPlayer } from "@/app/_component/widget/video-player";
 import type { FC, ReactNode } from "react";
 
@@ -21,6 +22,11 @@ export default function Page() {
 						</WidgetWrapper>
 					</div>
 
+					<div className="col-span-1 mx-auto">
+						<WidgetWrapper>
+							<QrCode />
+						</WidgetWrapper>
+					</div>
 					<div className="bg-red-200">1x1</div>
 					<div className="bg-red-200">1x1</div>
 					<div className="bg-red-200">1x1</div>
@@ -55,13 +61,14 @@ export const WidgetWrapper: FC<WidgetWrapperProps> = (props) => {
 	return (
 		// TODO: widgetのコード表示モードかつwidget選択時にoutlineを表示
 		// <div className="outline-2 hover:outline-sky-500 outline-sky-500 relative h-full w-full rounded-lg border outline outline-offset-4 transition-[outline] duration-500">
-		<div className="outline-2 relative h-full w-full rounded-lg">
+		<div className="outline-2 outline-transparent relative h-full w-full rounded-md outline outline-offset-4 transition-[outline] duration-500">
 			{/* TODO: widgetのコード表示モードの場合に表示 */}
 			{/* <span className="-top-2 -right-2 absolute z-10 hidden h-3 w-3 opacity-100 transition-opacity duration-500 lg:block">
 				<span className="absolute inset-0 block animate-ping rounded-full bg-sky-400" />
 				<span className="absolute inset-0 rounded-full bg-sky-500" />
 			</span> */}
-			{children}
+
+			<div className="relative rounded-lg border bg-widget">{children}</div>
 		</div>
 	);
 };
