@@ -56,7 +56,8 @@
 				"template.tsx",
 				".storybook",
 				"*.stories.*",
-				"*.stories-skip.*"
+				"*.stories-skip.*",
+				"tree.json"
 			],
 			"linter": {
 				"rules": {
