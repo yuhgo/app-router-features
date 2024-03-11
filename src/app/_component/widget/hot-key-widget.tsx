@@ -4,7 +4,7 @@ import { cn } from "@/_lib/shadcn/utils";
 import { type FC, useState } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
 
-export const HotKey: FC = () => {
+export const HotKeyWidget: FC = () => {
 	const [active, setActive] = useState(false);
 
 	useHotkeys("meta+u, ctrl+u", () => setActive((v) => !v), {

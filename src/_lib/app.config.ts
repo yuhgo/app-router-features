@@ -1,5 +1,5 @@
 export const AppConfig = {
 	sns: {
-		x: "https://twitter.com/home",
+		x: "https://twitter.com",
 	},
 } as const;

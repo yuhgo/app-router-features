@@ -3,7 +3,7 @@ import type { FC } from "react";
 import { AppConfig } from "@/_lib/app.config";
 import { QRCodeSVG } from "qrcode.react";
 
-export const QrCode: FC = () => {
+export const QrCodeWidget: FC = () => {
 	return (
 		<>
 			<div className="p-3">

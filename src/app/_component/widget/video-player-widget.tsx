@@ -7,7 +7,7 @@ type VideoPlayerProps = {
 	videoId: string;
 };
 
-export const VideoPlayer: FC<VideoPlayerProps> = (props) => {
+export const VideoPlayerWidget: FC<VideoPlayerProps> = (props) => {
 	const { videoId } = props;
 
 	return (

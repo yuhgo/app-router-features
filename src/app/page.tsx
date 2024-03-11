@@ -1,8 +1,9 @@
 import { extractYouTubeVideoId } from "@/_lib/extractYouTubeVideoId";
 import { Explorer } from "@/app/_component/explorer/explorer";
-import { HotKey } from "@/app/_component/widget/hot-key";
-import { QrCode } from "@/app/_component/widget/qr-code";
-import { VideoPlayer } from "@/app/_component/widget/video-player";
+import { HotKeyWidget } from "@/app/_component/widget/hot-key-widget";
+import { ImageCropperWidget } from "@/app/_component/widget/image-cropper-widget";
+import { QrCodeWidget } from "@/app/_component/widget/qr-code-widget";
+import { VideoPlayerWidget } from "@/app/_component/widget/video-player-widget";
 import type { FC, ReactNode } from "react";
 
 export default function Page() {
@@ -19,13 +20,13 @@ export default function Page() {
 					{/* YouTube カード */}
 					<div className="relative col-span-2 aspect-video lg:col-span-3 lg:row-span-2 lg:aspect-auto">
 						<div className="outline-2 outline-transparent relative size-full rounded-md outline outline-offset-4 transition-[outline] duration-500">
-							<VideoPlayer videoId={youtubeVideoId} />
+							<VideoPlayerWidget videoId={youtubeVideoId} />
 						</div>
 					</div>
 
 					<div className="inset-0 col-span-1 aspect-square">
 						<WidgetWrapper>
-							<QrCode />
+							<QrCodeWidget />
 						</WidgetWrapper>
 					</div>
 
@@ -33,12 +34,18 @@ export default function Page() {
 					<div className="bg-red-200">1x1</div>
 					<div className="inset-0 col-span-1 aspect-square">
 						<WidgetWrapper>
-							<HotKey />
+							<HotKeyWidget />
 						</WidgetWrapper>
 					</div>
 					<div className="col-span-2 bg-blue-200">1x2</div>
 					<div className="col-span-2 bg-blue-200">1x2</div>
-					<div className="bg-red-200">1x1</div>
+
+					<div className="inset-0 col-span-1 aspect-square">
+						<WidgetWrapper>
+							<ImageCropperWidget />
+						</WidgetWrapper>
+					</div>
+
 					<div className="bg-red-200">1x1</div>
 					<div className="bg-red-200">1x1</div>
 					<div className="bg-red-200">1x1</div>
