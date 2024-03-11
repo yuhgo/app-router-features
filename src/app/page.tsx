@@ -1,9 +1,11 @@
 import { extractYouTubeVideoId } from "@/_lib/extractYouTubeVideoId";
 import { Explorer } from "@/app/_component/explorer/explorer";
+import { Button } from "@/app/_component/ui/button";
 import { HotKeyWidget } from "@/app/_component/widget/hot-key-widget";
 import { ImageCropperWidget } from "@/app/_component/widget/image-cropper-widget";
 import { QrCodeWidget } from "@/app/_component/widget/qr-code-widget";
 import { VideoPlayerWidget } from "@/app/_component/widget/video-player-widget";
+import Link from "next/link";
 import type { FC, ReactNode } from "react";
 
 export default function Page() {
@@ -49,7 +51,11 @@ export default function Page() {
 					<div className="bg-red-200">1x1</div>
 					<div className="bg-red-200">1x1</div>
 					<div className="bg-red-200">1x1</div>
-					<div className="col-span-2 bg-blue-200">1x2</div>
+					<div className="inset-0 col-span-2 aspect-auto">
+						<Button>
+							<Link href="/api/auth/signin">ログイン</Link>
+						</Button>
+					</div>
 					<div className="col-span-2 bg-blue-200">1x2</div>
 					<div className="col-span-2 bg-blue-200">1x2</div>
 					<div className="col-span-3 bg-green-200">1x3</div>

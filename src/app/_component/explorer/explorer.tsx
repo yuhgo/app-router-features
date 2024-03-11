@@ -33,9 +33,8 @@ const FolderComponent: FC<ExplorerNode> = (props) => {
 				{/* 再帰的にFolderComponentを呼び出す */}
 				{children?.map((child, index) => {
 					return (
-						<div className="flex flex-col">
+						<div key={`${child.filePath}_${index}`} className="flex flex-col">
 							<FolderComponent
-								key={`${child.filePath}_${index}`}
 								defaultOpen={true}
 								name={child.name}
 								type={child.type}
@@ -53,14 +52,9 @@ export const Explorer: FC = () => {
 	return (
 		<div className="mx-auto flex h-full w-full flex-col whitespace-nowrap text-xs">
 			{explorerData.map((data, index) => (
-				<div className="flex flex-col">
-					<FolderComponent
-						key={`${data.filePath}_${index}`}
-						defaultOpen={true}
-						name={data.name}
-						type={data.type}
-						children={data.children || undefined}
-					/>
+				<div key={`${data.filePath}_${index}`} className="flex flex-col">
+					{/* biome-ignore lint/correctness/noChildrenProp: <explanation> */}
+					<FolderComponent defaultOpen={true} name={data.name} type={data.type} children={data.children ?? undefined} />
 				</div>
 			))}
 		</div>
