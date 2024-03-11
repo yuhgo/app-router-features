@@ -6,9 +6,9 @@ import { QRCodeSVG } from "qrcode.react";
 export const QrCode: FC = () => {
 	return (
 		<>
-			<div className="max-w-[128px] p-3">
+			<div className="p-3">
 				<QRCodeSVG
-					className="h-full max-h-full w-full max-w-full"
+					className="size-full"
 					bgColor="transparent"
 					fgColor="hsl(var(--muted-foreground))"
 					value={AppConfig.sns.x}
