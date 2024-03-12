@@ -6,6 +6,7 @@ import { ChartWidget } from "@/app/_component/widget/chart-widget";
 import { DateFormatWidget } from "@/app/_component/widget/date-format-widget";
 import { HotKeyWidget } from "@/app/_component/widget/hot-key-widget";
 import { ImageCropperWidget } from "@/app/_component/widget/image-cropper-widget";
+import { LinkPreviewWidget } from "@/app/_component/widget/link-preview-widget";
 import { LocaleSwitcherWidget } from "@/app/_component/widget/locale-switcher-widget";
 import { QrCodeWidget } from "@/app/_component/widget/qr-code-widget";
 import { VideoPlayerWidget } from "@/app/_component/widget/video-player-widget";
@@ -90,7 +91,11 @@ export default function Page() {
 					</div>
 
 					{/* リンクプレビュー */}
-					<div className="col-span-3 bg-green-200">1x3</div>
+					<div className="col-span-3 bg-green-200">
+						<WidgetWrapper aspectRatio="auto">
+							<LinkPreviewWidget />
+						</WidgetWrapper>
+					</div>
 
 					{/* 時計 */}
 					<div className="col-span-3 bg-green-200">1x3</div>
