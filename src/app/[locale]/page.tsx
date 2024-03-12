@@ -5,6 +5,7 @@ import { AuthWidget } from "@/app/_component/widget/auth-widget";
 import { ChartWidget } from "@/app/_component/widget/chart-widget";
 import { HotKeyWidget } from "@/app/_component/widget/hot-key-widget";
 import { ImageCropperWidget } from "@/app/_component/widget/image-cropper-widget";
+import { LocaleSwitcherWidget } from "@/app/_component/widget/locale-switcher-widget";
 import { QrCodeWidget } from "@/app/_component/widget/qr-code-widget";
 import { VideoPlayerWidget } from "@/app/_component/widget/video-player-widget";
 import { cva } from "class-variance-authority";
@@ -55,7 +56,11 @@ export default function Page() {
 					</div>
 
 					{/* 言語切替 */}
-					<div className="bg-red-200">1x1</div>
+					<div className="col-span-1">
+						<WidgetWrapper aspectRatio="square">
+							<LocaleSwitcherWidget />
+						</WidgetWrapper>
+					</div>
 
 					{/* テーマ切り替え */}
 					<div className="bg-red-200">1x1</div>
