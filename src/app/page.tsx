@@ -2,6 +2,7 @@ import { extractYouTubeVideoId } from "@/_lib/extractYouTubeVideoId";
 import { cn } from "@/_lib/shadcn/utils";
 import { Explorer } from "@/app/_component/explorer/explorer";
 import { AuthWidget } from "@/app/_component/widget/auth-widget";
+import { ChartWidget } from "@/app/_component/widget/chart-widget";
 import { HotKeyWidget } from "@/app/_component/widget/hot-key-widget";
 import { ImageCropperWidget } from "@/app/_component/widget/image-cropper-widget";
 import { QrCodeWidget } from "@/app/_component/widget/qr-code-widget";
@@ -69,7 +70,11 @@ export default function Page() {
 					</div>
 
 					{/* チャート */}
-					<div className="col-span-2 row-span-1 bg-blue-200">1x2</div>
+					<div className="col-span-2 row-span-1">
+						<WidgetWrapper aspectRatio="auto">
+							<ChartWidget />
+						</WidgetWrapper>
+					</div>
 
 					{/* 日付フォーマット */}
 					<div className="col-span-2 bg-blue-200">1x2</div>
