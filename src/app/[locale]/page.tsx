@@ -10,6 +10,7 @@ import { ImageCropperWidget } from "@/app/_component/widget/image-cropper-widget
 import { LinkPreviewWidget } from "@/app/_component/widget/link-preview-widget";
 import { LocaleSwitcherWidget } from "@/app/_component/widget/locale-switcher-widget";
 import { QrCodeWidget } from "@/app/_component/widget/qr-code-widget";
+import { ThreeFiberWidget } from "@/app/_component/widget/three-fiber-widget";
 import { VideoPlayerWidget } from "@/app/_component/widget/video-player-widget";
 import { cva } from "class-variance-authority";
 import type { FC, ReactNode } from "react";
@@ -73,7 +74,11 @@ export default function Page() {
 					</div>
 
 					{/* 3D */}
-					<div className="bg-red-200">1x1</div>
+					<div className="col-span-1">
+						<WidgetWrapper aspectRatio="square">
+							<ThreeFiberWidget />
+						</WidgetWrapper>
+					</div>
 
 					<div className="col-span-2 row-span-1 min-h-[110px]">
 						<WidgetWrapper aspectRatio="auto">
