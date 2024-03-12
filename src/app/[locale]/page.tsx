@@ -9,6 +9,7 @@ import { HotKeyWidget } from "@/app/_component/widget/hot-key-widget";
 import { ImageCropperWidget } from "@/app/_component/widget/image-cropper-widget";
 import { LinkPreviewWidget } from "@/app/_component/widget/link-preview-widget";
 import { LocaleSwitcherWidget } from "@/app/_component/widget/locale-switcher-widget";
+import { MarqueeWidget } from "@/app/_component/widget/marquee-widget";
 import { QrCodeWidget } from "@/app/_component/widget/qr-code-widget";
 import { ThreeFiberWidget } from "@/app/_component/widget/three-fiber-widget";
 import { VideoPlayerWidget } from "@/app/_component/widget/video-player-widget";
@@ -101,7 +102,7 @@ export default function Page() {
 					</div>
 
 					{/* リンクプレビュー */}
-					<div className="col-span-3 bg-green-200">
+					<div className="col-span-3">
 						<WidgetWrapper aspectRatio="auto">
 							<LinkPreviewWidget />
 						</WidgetWrapper>
@@ -111,7 +112,11 @@ export default function Page() {
 					<div className="col-span-3 bg-green-200">1x3</div>
 
 					{/* マーキー(Marquee) */}
-					<div className="col-span-6 bg-orange-200">1x6</div>
+					<div className="col-span-6">
+						<WidgetWrapper aspectRatio="auto">
+							<MarqueeWidget />
+						</WidgetWrapper>
+					</div>
 
 					{/* Form */}
 					<div className="col-span-3 row-span-2 bg-violet-200">2x3</div>
