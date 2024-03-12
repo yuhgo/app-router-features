@@ -1,5 +1,6 @@
 import { extractYouTubeVideoId } from "@/_lib/extractYouTubeVideoId";
 import { cn } from "@/_lib/shadcn/utils";
+import { ThemeToggleButton } from "@/app/_component/button/theme-toggle-button";
 import { Explorer } from "@/app/_component/explorer/explorer";
 import { AuthWidget } from "@/app/_component/widget/auth-widget";
 import { ChartWidget } from "@/app/_component/widget/chart-widget";
@@ -65,7 +66,11 @@ export default function Page() {
 					</div>
 
 					{/* テーマ切り替え */}
-					<div className="bg-red-200">1x1</div>
+					<div className="col-span-1">
+						<WidgetWrapper aspectRatio="square">
+							<ThemeToggleButton />
+						</WidgetWrapper>
+					</div>
 
 					{/* 3D */}
 					<div className="bg-red-200">1x1</div>
