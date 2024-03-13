@@ -4,6 +4,7 @@ import { ThemeToggleButton } from "@/app/_component/button/theme-toggle-button";
 import { Explorer } from "@/app/_component/explorer/explorer";
 import { AuthWidget } from "@/app/_component/widget/auth-widget";
 import { ChartWidget } from "@/app/_component/widget/chart-widget";
+import { ClockWidget } from "@/app/_component/widget/clock-widget";
 import { DateFormatWidget } from "@/app/_component/widget/date-format-widget";
 import { HotKeyWidget } from "@/app/_component/widget/hot-key-widget";
 import { HowlerWidget } from "@/app/_component/widget/howler-widget";
@@ -117,7 +118,11 @@ export default function Page() {
 					</div>
 
 					{/* 時計 */}
-					<div className="col-span-3 bg-green-200">1x3</div>
+					<div className="col-span-3">
+						<WidgetWrapper aspectRatio="auto">
+							<ClockWidget />
+						</WidgetWrapper>
+					</div>
 
 					{/* マーキー(Marquee) */}
 					<div className="col-span-6">
