@@ -6,6 +6,7 @@ import { AuthWidget } from "@/app/_component/widget/auth-widget";
 import { ChartWidget } from "@/app/_component/widget/chart-widget";
 import { DateFormatWidget } from "@/app/_component/widget/date-format-widget";
 import { HotKeyWidget } from "@/app/_component/widget/hot-key-widget";
+import { HowlerWidget } from "@/app/_component/widget/howler-widget";
 import { ImageCropperWidget } from "@/app/_component/widget/image-cropper-widget";
 import { LinkPreviewWidget } from "@/app/_component/widget/link-preview-widget";
 import { LocaleSwitcherWidget } from "@/app/_component/widget/locale-switcher-widget";
@@ -39,10 +40,17 @@ export default function Page() {
 							<QrCodeWidget />
 						</WidgetWrapper>
 					</div>
+
 					{/* いいね */}
 					<div className="bg-red-200">1x1</div>
+
 					{/* 読み上げ */}
-					<div className="bg-red-200">1x1</div>
+					<div className="col-span-1">
+						<WidgetWrapper aspectRatio="square">
+							<HowlerWidget />
+						</WidgetWrapper>
+					</div>
+
 					<div className="col-span-1">
 						<WidgetWrapper>
 							<HotKeyWidget />
