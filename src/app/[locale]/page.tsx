@@ -6,6 +6,7 @@ import { AuthWidget } from "@/app/_component/widget/auth-widget";
 import { CarouselWidget } from "@/app/_component/widget/carousel-widget";
 import { ChartWidget } from "@/app/_component/widget/chart-widget";
 import { ClockWidget } from "@/app/_component/widget/clock-widget";
+import { ColorSchemaWidget } from "@/app/_component/widget/color-schema-widget";
 import { DateFormatWidget } from "@/app/_component/widget/date-format-widget";
 import { FormWidget } from "@/app/_component/widget/form-widget";
 import { HotKeyWidget } from "@/app/_component/widget/hot-key-widget";
@@ -148,7 +149,11 @@ export default function Page() {
 					</div>
 
 					{/* カラーテーマ */}
-					<div className="bg-red-200">1x1</div>
+					<div className="col-span-1">
+						<WidgetWrapper aspectRatio="square">
+							<ColorSchemaWidget />
+						</WidgetWrapper>
+					</div>
 				</div>
 			</main>
 		</div>
