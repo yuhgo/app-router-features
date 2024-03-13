@@ -3,6 +3,7 @@ import { cn } from "@/_lib/shadcn/utils";
 import { ThemeToggleButton } from "@/app/_component/button/theme-toggle-button";
 import { Explorer } from "@/app/_component/explorer/explorer";
 import { AuthWidget } from "@/app/_component/widget/auth-widget";
+import { CarouselWidget } from "@/app/_component/widget/carousel-widget";
 import { ChartWidget } from "@/app/_component/widget/chart-widget";
 import { ClockWidget } from "@/app/_component/widget/clock-widget";
 import { DateFormatWidget } from "@/app/_component/widget/date-format-widget";
@@ -140,7 +141,11 @@ export default function Page() {
 					</div>
 
 					{/* スライダー */}
-					<div className="col-span-3 row-span-2 bg-violet-200">2x3</div>
+					<div className="col-span-3 row-span-2">
+						<WidgetWrapper aspectRatio="auto">
+							<CarouselWidget />
+						</WidgetWrapper>
+					</div>
 
 					{/* カラーテーマ */}
 					<div className="bg-red-200">1x1</div>
