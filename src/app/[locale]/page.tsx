@@ -6,6 +6,7 @@ import { AuthWidget } from "@/app/_component/widget/auth-widget";
 import { ChartWidget } from "@/app/_component/widget/chart-widget";
 import { ClockWidget } from "@/app/_component/widget/clock-widget";
 import { DateFormatWidget } from "@/app/_component/widget/date-format-widget";
+import { FormWidget } from "@/app/_component/widget/form-widget";
 import { HotKeyWidget } from "@/app/_component/widget/hot-key-widget";
 import { HowlerWidget } from "@/app/_component/widget/howler-widget";
 import { ImageCropperWidget } from "@/app/_component/widget/image-cropper-widget";
@@ -132,7 +133,11 @@ export default function Page() {
 					</div>
 
 					{/* Form */}
-					<div className="col-span-3 row-span-2 bg-violet-200">2x3</div>
+					<div className="col-span-3 row-span-2">
+						<WidgetWrapper aspectRatio="auto">
+							<FormWidget />
+						</WidgetWrapper>
+					</div>
 
 					{/* スライダー */}
 					<div className="col-span-3 row-span-2 bg-violet-200">2x3</div>
