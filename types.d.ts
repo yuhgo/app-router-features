@@ -26,5 +26,7 @@ declare namespace NodeJS {
 		readonly API_URL_PROD: string | "";
 
 		readonly BASE_URL: string | "";
+
+		readonly RESEND_API_KEY: string | "";
 	}
 }

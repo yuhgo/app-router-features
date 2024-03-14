@@ -16,6 +16,7 @@ import { LinkPreviewWidget } from "@/app/_component/widget/link-preview-widget";
 import { LocaleSwitcherWidget } from "@/app/_component/widget/locale-switcher-widget";
 import { MarqueeWidget } from "@/app/_component/widget/marquee-widget";
 import { QrCodeWidget } from "@/app/_component/widget/qr-code-widget";
+import { ResendWidget } from "@/app/_component/widget/resend-widget/resend-widget";
 import { ThreeFiberWidget } from "@/app/_component/widget/three-fiber-widget";
 import { VideoPlayerWidget } from "@/app/_component/widget/video-player-widget";
 import { cva } from "class-variance-authority";
@@ -64,7 +65,11 @@ export default function Page() {
 					<div className="col-span-2 bg-blue-200">1x2</div>
 
 					{/* メール送信 */}
-					<div className="col-span-2 bg-blue-200">1x2</div>
+					<div className="col-span-2">
+						<WidgetWrapper aspectRatio="auto">
+							<ResendWidget />
+						</WidgetWrapper>
+					</div>
 
 					<div className="col-span-1">
 						<WidgetWrapper>

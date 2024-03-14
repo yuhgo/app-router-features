@@ -4,6 +4,7 @@ import { I18nProviderClient } from "@/_lib/locales/client";
 import { cn } from "@/_lib/shadcn/utils";
 import { Header } from "@/app/_component/header";
 import { Provider } from "@/app/_component/provider/provider";
+import { Toaster } from "@/app/_component/ui/toaster";
 import { Noto_Sans_JP } from "next/font/google";
 
 const notoSansJp = Noto_Sans_JP({
@@ -24,6 +25,8 @@ export default function LocaleLayout({
 						{children}
 					</I18nProviderClient>
 				</Provider>
+
+				<Toaster />
 			</body>
 		</html>
 	);
