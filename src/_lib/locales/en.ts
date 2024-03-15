@@ -14,4 +14,5 @@ export default {
 		maxLength: "The maximum number of characters is {count}",
 	},
 	mustLoggedIn: "You must be logged in",
+	like: "Like",
 } as const;

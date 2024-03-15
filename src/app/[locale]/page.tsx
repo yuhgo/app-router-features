@@ -12,6 +12,7 @@ import { FormWidget } from "@/app/_component/widget/form-widget";
 import { HotKeyWidget } from "@/app/_component/widget/hot-key-widget";
 import { HowlerWidget } from "@/app/_component/widget/howler-widget";
 import { ImageCropperWidget } from "@/app/_component/widget/image-cropper-widget";
+import { LikeButtonWidget } from "@/app/_component/widget/like-widget/like-button-widget";
 import { LinkPreviewWidget } from "@/app/_component/widget/link-preview-widget";
 import { LocaleSwitcherWidget } from "@/app/_component/widget/locale-switcher-widget";
 import { MarqueeWidget } from "@/app/_component/widget/marquee-widget";
@@ -47,7 +48,11 @@ export default function Page() {
 					</div>
 
 					{/* いいね */}
-					<div className="bg-red-200">1x1</div>
+					<div className="col-span-1">
+						<WidgetWrapper aspectRatio="square">
+							<LikeButtonWidget />
+						</WidgetWrapper>
+					</div>
 
 					{/* 読み上げ */}
 					<div className="col-span-1">

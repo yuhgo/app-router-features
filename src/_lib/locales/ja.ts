@@ -14,4 +14,5 @@ export default {
 		maxLength: "最大文字数は{count}文字です",
 	},
 	mustLoggedIn: "ログインしてください",
+	like: "いいね",
 } as const;
