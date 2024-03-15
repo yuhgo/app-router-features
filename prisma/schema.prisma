@@ -54,6 +54,7 @@ model User {
   updatedAt     DateTime  @updatedAt
   accounts      Account[]
   sessions      Session[]
+  isLiked       Boolean   @default (false)
 }
 
 model VerificationRequest {
@@ -65,4 +66,11 @@ model VerificationRequest {
   updatedAt  DateTime @updatedAt
 
   @@unique([identifier, token])
+}
+
+model LikeWidget {
+  id        String   @id @default(cuid())
+  count     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
