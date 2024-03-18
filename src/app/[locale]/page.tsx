@@ -15,6 +15,7 @@ import { ImageCropperWidget } from "@/app/_component/widget/image-cropper-widget
 import { LikeButtonWidget } from "@/app/_component/widget/like-widget/like-button-widget";
 import { LinkPreviewWidget } from "@/app/_component/widget/link-preview-widget";
 import { LocaleSwitcherWidget } from "@/app/_component/widget/locale-switcher-widget";
+import { LucideWidget } from "@/app/_component/widget/lucide-widget";
 import { MarqueeWidget } from "@/app/_component/widget/marquee-widget";
 import { QrCodeWidget } from "@/app/_component/widget/qr-code-widget";
 import { ResendWidget } from "@/app/_component/widget/resend-widget/resend-widget";
@@ -67,7 +68,11 @@ export default function Page() {
 						</WidgetWrapper>
 					</div>
 					{/* スター */}
-					<div className="col-span-2 bg-blue-200">1x2</div>
+					<div className="col-span-2">
+						<WidgetWrapper aspectRatio="auto">
+							<LucideWidget />
+						</WidgetWrapper>
+					</div>
 
 					{/* メール送信 */}
 					<div className="col-span-2">
