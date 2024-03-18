@@ -7,7 +7,7 @@ import { useToast } from "@/app/_component/ui/use-toast";
 import { toggleLike } from "@/app/_component/widget/like-widget/action";
 import { Heart } from "lucide-react";
 import { useSession } from "next-auth/react";
-import { type FC, useOptimistic } from "react";
+import { type FC, startTransition, useOptimistic } from "react";
 
 type LikeButtonProps = {
 	isLiked: boolean;
@@ -35,8 +35,10 @@ export const LikeButton: FC<LikeButtonProps> = (props) => {
 			onClick={() => {
 				if (userId) {
 					toggleLike(!liked);
-					setLikeCount(liked ? "decrement" : "increment");
-					setLiked(!liked);
+					startTransition(() => {
+						setLikeCount(liked ? "decrement" : "increment");
+						setLiked(!liked);
+					});
 				} else {
 					toast({
 						title: t("mustLoggedIn"),

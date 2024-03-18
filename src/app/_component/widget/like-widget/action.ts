@@ -8,7 +8,7 @@ import { cache } from "react";
 
 export const isLiked = cache(async (): Promise<boolean> => {
 	const session = await getServerSession(nextAuthOptions);
-	const userId = session?.user?.id;
+	const userId = session?.user?.id ?? "";
 
 	const user = await prisma.user.findUnique({
 		where: {
