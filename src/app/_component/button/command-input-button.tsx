@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/app/_component/ui/button";
 import {
 	CommandDialog,

@@ -1,10 +1,7 @@
-"use client";
-
 import { CommandInputButton } from "@/app/_component/button/command-input-button";
+import { InspectButton } from "@/app/_component/button/inspect-button";
 import { ProfileButton } from "@/app/_component/button/profile-button";
 import { ThemeToggleButton } from "@/app/_component/button/theme-toggle-button";
-import { Button } from "@/app/_component/ui/button";
-import { SearchCode } from "lucide-react";
 import type { FC } from "react";
 
 export const Header: FC = () => {
@@ -21,9 +18,7 @@ export const Header: FC = () => {
 				<ThemeToggleButton />
 
 				{/* 実装ビューのトグルボタン */}
-				<Button variant="ghost" size="icon">
-					<SearchCode size={20} />
-				</Button>
+				<InspectButton />
 
 				{/* プロフィールボタン */}
 				<ProfileButton />
